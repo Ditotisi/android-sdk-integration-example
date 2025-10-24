@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity(),LicenseCallback {
     private fun startLivenessFlow() {
         val licenseId = BuildConfig.LICENSE_ID
         val licenseKey = BuildConfig.LICENSE_KEY
-        val proxyBaseURL = "https://81c93f06ab6c.ngrok-free.app"
+        val proxyBaseURL = "https://myproxy.example.com"
         sdk.debugDevModeDetection(false)
         sdk.setProxy("$proxyBaseURL/proxy/face/liveness", "$proxyBaseURL/proxy/license/${licenseId}/check", "$proxyBaseURL/proxy/encryption/generate-key")
         sdk.deepfakeDetection(true, false)
